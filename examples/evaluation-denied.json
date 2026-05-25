@@ -1,0 +1,14 @@
+{
+  "version": "evaluation.v1",
+  "status": "denied",
+  "envelopeId": "env_arc_market_agent_001",
+  "requestId": "req_market_agent_002",
+  "policyHash": "0x3053048252804b1892e052db8bd52c71d1f5be710bc8246d39535286318d8c1f",
+  "requestHash": "0xbf6f764b875d063b809f9b16467178b0b042b6c1ef16ef0cdaa54d3fac6ce544",
+  "denialHash": "0xfd8104f535c47448d0dd6a35ed70a14481bb6edfc49358259229ef8a44a7978c",
+  "evaluatedAt": "2026-05-23T12:00:01.000Z",
+  "reasons": [
+    "amount 125.00 exceeds max per action 25.00",
+    "amount plus period spend exceeds max 100.00 per day"
+  ]
+}

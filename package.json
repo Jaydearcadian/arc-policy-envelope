@@ -1,0 +1,37 @@
+{
+  "name": "arc-policy-envelope",
+  "version": "0.1.0",
+  "description": "Composable policy envelopes for bounded Arc-native value movement.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./api": {
+      "types": "./dist/api.d.ts",
+      "import": "./dist/api.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "public",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "node --test --import tsx test/*.test.ts",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

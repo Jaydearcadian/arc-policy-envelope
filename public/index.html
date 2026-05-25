@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arc Policy Envelope</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Arc-native agent guardrail</p>
+        <h1>Policy Envelope</h1>
+        <p class="lede">
+          Evaluate whether an agent request is inside policy before another system moves USDC or EURC.
+        </p>
+        <div class="badges" aria-label="Primitive properties">
+          <span>SDK</span>
+          <span>HTTP API</span>
+          <span>No custody</span>
+          <span>No RPC calls</span>
+          <span>No onchain writes</span>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Policy evaluation workspace">
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Input</p>
+              <h2>Envelope</h2>
+            </div>
+            <span class="pill">USDC on Arc testnet</span>
+          </div>
+          <pre id="envelope" tabindex="0" aria-label="Envelope JSON"></pre>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Agent action</p>
+              <h2>Request</h2>
+            </div>
+            <label class="select-label">
+              Scenario
+              <select id="scenario">
+                <option value="allowed">Allowed request</option>
+                <option value="denied">Denied request</option>
+              </select>
+            </label>
+          </div>
+          <pre id="request" tabindex="0" aria-label="Request JSON"></pre>
+          <button id="evaluate" type="button">Evaluate envelope</button>
+        </article>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Output</p>
+            <h2>Evaluation</h2>
+          </div>
+          <span id="status" class="status" role="status" aria-atomic="true">Not evaluated</span>
+        </div>
+        <p id="verdict" class="verdict">Choose a scenario and evaluate the envelope.</p>
+        <div class="hash-grid">
+          <div>
+            <span>policyHash</span>
+            <code id="policyHash">n/a</code>
+          </div>
+          <div>
+            <span>requestHash</span>
+            <code id="requestHash">n/a</code>
+          </div>
+          <div>
+            <span>decisionHash</span>
+            <code id="decisionHash">n/a</code>
+          </div>
+        </div>
+        <h3>Reasons</h3>
+        <ul id="reasons"></ul>
+        <h3>Proof of Payable policy ref</h3>
+        <pre id="policyRef" tabindex="0" aria-label="PolicyRef JSON">Evaluate an allowed request to create a PolicyRef.</pre>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

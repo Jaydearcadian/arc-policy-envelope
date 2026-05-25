@@ -1,0 +1,13 @@
+{
+  "version": "request.v1",
+  "id": "req_market_agent_002",
+  "payerId": "org_microcosm_demo",
+  "actorId": "agent_market_researcher",
+  "asset": "USDC",
+  "network": "arc-testnet",
+  "amount": "125.00",
+  "reason": "Oversized market agent bankroll request",
+  "target": { "kind": "venue", "venueId": "venue_prediction_market_demo" },
+  "requestedAt": "2026-05-23T12:00:00.000Z",
+  "spentInPeriod": "10.00"
+}

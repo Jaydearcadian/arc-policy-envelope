@@ -1,0 +1,28 @@
+{
+  "version": "envelope.v1",
+  "id": "env_arc_market_agent_001",
+  "name": "Market agent bankroll envelope",
+  "actor": {
+    "allowedActorIds": ["agent_market_researcher"],
+    "grantMode": "hard"
+  },
+  "asset": {
+    "network": "arc-testnet",
+    "asset": "USDC"
+  },
+  "amount": {
+    "maxPerAction": "25.00",
+    "maxPerPeriod": "100.00",
+    "period": "day"
+  },
+  "target": {
+    "allowedRecipientIds": ["recipient_research_desk"],
+    "allowedVenueIds": ["venue_prediction_market_demo"]
+  },
+  "schedule": {
+    "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+    "startHourUtc": 0,
+    "endHourUtc": 24
+  },
+  "createdAt": "2026-05-23T00:00:00.000Z"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "evaluation.v1",
+  "status": "allowed",
+  "envelopeId": "env_arc_market_agent_001",
+  "requestId": "req_market_agent_001",
+  "policyHash": "0x3053048252804b1892e052db8bd52c71d1f5be710bc8246d39535286318d8c1f",
+  "requestHash": "0xe3d810c88443abc61bee60f482f0b7189bb63b216ba4353495e709b75ef75d25",
+  "approvalHash": "0x44af15df5983653f5dc0c339bddd6422ee7869815e7f86c424f12a205abfcc92",
+  "evaluatedAt": "2026-05-23T12:00:01.000Z",
+  "reasons": ["All envelope rules passed."]
+}
